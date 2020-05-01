@@ -1,0 +1,11 @@
+{
+  "name": "products_map",
+  "version": "1.0.0",
+  "description": "My final project",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Anastasiia Morozova",
+  "license": "ISC"
+}

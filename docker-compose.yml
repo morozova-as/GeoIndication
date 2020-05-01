@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  frontend:
+    build: frontend/
+    ports:
+      - "8888:5000"
+    command: ["npm", "run", "start"]
+  backend:
+    build: backend/
+    ports:
+      - "8000:8000"
+#    volumes:
+#      - ./backend/src/:/app/
+    command: python manage.py runserver 0.0.0.0:8000
+
+

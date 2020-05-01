@@ -1,0 +1,5 @@
+/venv
+/.idea
+/node_modules
+/backend/src/database/db.sqlite3
+/backend/src/media/imgs/*
