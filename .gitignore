@@ -3,3 +3,5 @@
 /node_modules
 /backend/src/database/db.sqlite3
 /backend/src/media/imgs/*
+/frontend/node_modules/
+/frontend/public/build

@@ -1,11 +1,12 @@
 FROM node:12.16.1-stretch-slim
 
 WORKDIR /app/
-COPY package*.json ./
+COPY . .
 RUN npm install
 
-COPY src .
+RUN npm run build
 
 EXPOSE 5000
 
-CMD ["npm", "run", "start"]
+CMD ["npm", "run", "start-docker"]
+#CMD ["npm", "run", "dev"]
