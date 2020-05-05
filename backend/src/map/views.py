@@ -1,7 +1,14 @@
-from django.http import HttpResponse
-from map.models import Place
-from map.models import Goods
+from django.http import HttpResponse, JsonResponse
+from django.http.request import HttpRequest
+from map.models import Place, Goods, Manufacturers, GeoIndication
 from django.core import serializers
+from django.middleware.csrf import get_token
+
+from django.views.decorators.csrf import csrf_exempt
+import json
+
+def create_csrf_token(request: HttpRequest) -> JsonResponse:
+    return JsonResponse({'csrfToken': get_token(request)})
 
 
 def update_place(request):
@@ -58,11 +65,6 @@ def get_place(request):
     return HttpResponse(s)
 
 
-def get_goods(request):
-    s = serializers.serialize('json', Goods.objects.all())
-    return HttpResponse(s, content_type='json')
-
-
 def get_all_names(request):
     to_find = []
     for i in range(len(request.POST) - 1):
@@ -79,6 +81,46 @@ def get_all_names(request):
 
     return HttpResponse(s, content_type='json')
 
+
+
+@csrf_exempt
+def get_goods(request):
+    s = serializers.serialize('json', GeoIndication.objects.all())
+
+    return HttpResponse(s, content_type='json')
+
+
+@csrf_exempt
+def get_indications_names(request):
+    names = list(GeoIndication.objects.values_list('name', flat=True))
+    return JsonResponse(names, safe=False)
+
+@csrf_exempt
+def get_indications_classes(request):
+    classes = list(GeoIndication.objects.values_list('target', flat=True))
+    classes_uniq = list(set(classes))
+    return JsonResponse(classes_uniq, safe=False)
+
+@csrf_exempt
+def get_polygons_by_facets(request):
+    data = json.loads(request.body)
+    names = data['names']
+    types = data['types']
+
+    query = GeoIndication.objects.all()
+    if names:
+        query = query.filter(name__in=names)
+    if types:
+        query = query.filter(target__in=types)
+
+    query = query.values_list('geo_loc_polygon')
+
+    respond = list(query)
+
+    if names or types:
+        return JsonResponse(respond, safe=False)
+
+    return JsonResponse('', safe=False)
 
 
 
