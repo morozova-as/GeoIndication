@@ -1,5 +1,6 @@
 <script>
 
+	import { onMount } from 'svelte';
 	import { mapGlobal } from './store';
 
 	let container;
@@ -7,7 +8,7 @@
 	let zoom = 5;
     let center = { lat: 56.886, lng: 35.268 };
 
-    import { onMount } from 'svelte';
+
 
 	onMount(async () => {
 		map = new google.maps.Map(container, {
@@ -39,6 +40,7 @@
 		map.set('styles', styles);
 
 		mapGlobal.set(map);
+
 	});
 
 
