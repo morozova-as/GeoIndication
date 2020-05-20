@@ -20,7 +20,10 @@
     let imgUrl = "./images/placeholder.jpg";
 
 
-    const fetchPromise = fetch('http://localhost:8000/get_image_for_product/', {
+    const { protocol, hostname } = window.location;
+    const baseURL = `${protocol}//${hostname}:8000/`;
+
+    const fetchPromise = fetch(`${baseURL}get_image_for_product/`, {
         method: 'POST',
         body: JSON.stringify(key)
     });

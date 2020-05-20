@@ -17,7 +17,10 @@
     import ImgTooltip from "./components/ImgTooltip.svelte";
     import Form from "./components/Form.svelte";
 
-    const baseURL = 'http://localhost:8000/'
+    const { protocol, hostname } = window.location;
+
+    const baseURL = `${protocol}//${hostname}:8000/`;
+    console.log(baseURL)
 
 
 
