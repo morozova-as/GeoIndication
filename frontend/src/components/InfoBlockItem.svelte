@@ -13,10 +13,11 @@
     let hoverFlag = false
 
     let component;
+    // import placeholder from "../placeholder.jpg"
 
 
     export let state = true;
-    let imgUrl = 'https://res.cloudinary.com/lmru-test/image/upload/placeholder.jpg';
+    let imgUrl = "./images/placeholder.jpg";
 
 
     const fetchPromise = fetch('http://localhost:8000/get_image_for_product/', {
