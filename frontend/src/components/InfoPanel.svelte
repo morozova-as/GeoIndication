@@ -124,7 +124,7 @@
         padding-bottom: 20px;
         text-align: center;
 
-        font-size: 16px;
+        font-size: 18px;
         font-weight: 700;
 
         width: 300px;

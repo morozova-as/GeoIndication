@@ -145,7 +145,7 @@
     .field-label {
         display: block;
         position: relative;
-        padding-left: 35px;
+        padding-left: 25px;
         cursor: pointer;
         font-size: 14px;
         line-height: 16px;

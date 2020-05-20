@@ -131,7 +131,7 @@
         text-align: left;
 
         font-weight: 600;
-        font-size: 12px;
+        font-size: 14px;
         line-height: 20px;
     }
 
@@ -240,7 +240,8 @@
     .description {
         margin-top: 15px;
         color: #525252;
-        font-size: 12px;
+        font-size: 14px;
+        line-height: 18px;
         font-weight: 300;
     }
 
@@ -248,8 +249,8 @@
         color: #3c3c3c;
         font-weight: 600;
 
-        font-size: 12px;
-        line-height: 20px;
+        font-size: 14px;
+        line-height: 18px;
     }
 
     .click-link {
@@ -327,7 +328,7 @@
     }
 
     .geo-text {
-        padding: 20px 10px;
+        padding: 10px;
         font-size: 12px;
         font-weight: 300;
         display: grid;
@@ -336,8 +337,8 @@
     }
 
     .description-text {
-        padding: 20px 10px;
-        font-size: 12px;
+        padding: 10px;
+        font-size: 14px;
         font-weight: 300;
     }
 
