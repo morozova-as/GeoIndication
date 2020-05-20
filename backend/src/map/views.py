@@ -1,6 +1,6 @@
 from django.http import HttpResponse, JsonResponse, FileResponse
 from django.http.request import HttpRequest
-from map.models import Place, Goods, Manufacturers, GeoIndication
+from map.models import Manufacturers, GeoIndication
 from django.core import serializers
 from django.middleware.csrf import get_token
 from shapely.geometry import Point
