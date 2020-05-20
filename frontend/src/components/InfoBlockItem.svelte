@@ -130,7 +130,7 @@
         text-align: left;
 
         font-weight: 600;
-        font-size: 16px;
+        font-size: 12px;
         line-height: 20px;
     }
 
@@ -239,7 +239,7 @@
     .description {
         margin-top: 15px;
         color: #525252;
-        font-size: 16px;
+        font-size: 12px;
         font-weight: 300;
     }
 
@@ -247,7 +247,7 @@
         color: #3c3c3c;
         font-weight: 600;
 
-        font-size: 16px;
+        font-size: 12px;
         line-height: 20px;
     }
 
@@ -327,7 +327,7 @@
 
     .geo-text {
         padding: 20px 10px;
-        font-size: 16px;
+        font-size: 12px;
         font-weight: 300;
         display: grid;
         grid-template-columns: 20px auto;
@@ -336,7 +336,7 @@
 
     .description-text {
         padding: 20px 10px;
-        font-size: 16px;
+        font-size: 12px;
         font-weight: 300;
     }
 

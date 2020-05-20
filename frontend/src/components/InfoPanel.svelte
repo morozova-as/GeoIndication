@@ -11,7 +11,7 @@
             duration: params.duration || 400,
             easing: params.easing || quintOut,
             css: (t) => {
-                return `width: ${350 * t}px; padding-left: ${15 * t}px; padding-right: ${15 * t}px`
+                return `width: ${330 * t}px; padding-left: ${15 * t}px; padding-right: ${15 * t}px`
             },
         };
     }
@@ -44,7 +44,7 @@
         grid-template-columns: 100%;
 
         max-height: 100%;
-        width: 320px;
+        width: 300px;
 
         overflow-y: scroll;
         overflow-x: hidden;
@@ -124,10 +124,10 @@
         padding-bottom: 20px;
         text-align: center;
 
-        font-size: 20px;
+        font-size: 16px;
         font-weight: 700;
 
-        width: 320px;
+        width: 300px;
     }
 
 </style>

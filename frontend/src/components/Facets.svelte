@@ -95,8 +95,8 @@
     }
 
     .facet-title {
-        font-size: 24px;
-        line-height: 28px;
+        font-size: 20px;
+        line-height: 24px;
         font-weight: 600;
         position: sticky;
         top: 0;
@@ -147,8 +147,8 @@
         position: relative;
         padding-left: 35px;
         cursor: pointer;
-        font-size: 18px;
-        line-height: 20px;
+        font-size: 14px;
+        line-height: 16px;
     }
 
     .field-label:focus {
@@ -159,8 +159,8 @@
     .field-label:before {
         content: '';
         display: block;
-        width: 18px;
-        height: 18px;
+        width: 14px;
+        height: 14px;
         border: 1px solid #476c47;
         position: absolute;
         left: 0;
@@ -182,7 +182,7 @@
     .letter {
         font-weight: 600;
         overflow: hidden;
-        font-size: 24px;
+        font-size: 20px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -229,8 +229,9 @@
     .placeholder-input {
         transform-origin: 0 50%;
         transform: translateX(10px);
-        padding-bottom: 5px;
+        padding-bottom: 3px;
         width: fit-content;
+        font-size: 14px;
 
         display: flex;
         align-items: center;
@@ -248,8 +249,8 @@
     .input {
         width: 100%;
         background: transparent;
-        font-size: 20px;
-        height: 35px;
+        font-size: 16px;
+        height: 30px;
         outline: none !important;
         position: absolute;
         bottom: 0;
@@ -321,6 +322,7 @@
     }
 
     .facet-button {
+        font-size: 14px;
         background: transparent;
         cursor: pointer;
         margin: 0;

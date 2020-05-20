@@ -138,8 +138,8 @@
     }
 
     .title {
-        font-size: 20px;
-        line-height: 24px;
+        font-size: 16px;
+        line-height: 20px;
         font-weight: 600;
     }
 
@@ -201,15 +201,15 @@
 
     .label-name {
         margin-bottom: 10px;
-        font-size: 18px;
-        line-height: 22px;
+        font-size: 14px;
+        line-height: 18px;
         width: 90%;
     }
 
     .input {
         width: 100%;
         background: transparent;
-        font-size: 20px;
+        font-size: 16px;
         outline: none !important;
         margin: 0;
         border: 1px solid black;
@@ -246,7 +246,7 @@
         overflow: auto;
 
         resize: vertical;
-        font-size: 16px;
+        font-size: 12px;
         line-height: 20px;
     }
 

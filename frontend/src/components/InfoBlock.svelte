@@ -36,7 +36,7 @@
 
     .alert {
         text-align: center;
-        font-size: 20px;
+        font-size: 16px;
         padding: 20px 50px;
         background-color: #ffffff8f;
     }
