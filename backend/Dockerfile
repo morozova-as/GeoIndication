@@ -1,4 +1,5 @@
-FROM python:3.7.7-slim-buster
+#FROM python:3.7.7-slim-buster
+FROM deeppavlov/base-cpu
 
 ENV PYTHONUNBUFFERED 1
 
@@ -10,6 +11,8 @@ WORKDIR /app
 
 COPY requirements.txt /app
 RUN pip install -r requirements.txt
+
+RUN python -m deeppavlov install squad_bert
 
 COPY ./src /app/
 

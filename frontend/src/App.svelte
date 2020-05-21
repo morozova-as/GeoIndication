@@ -20,9 +20,6 @@
     const { protocol, hostname } = window.location;
 
     const baseURL = `${protocol}//${hostname}:8000/`;
-    console.log(baseURL)
-
-
 
 </script>
 
@@ -48,11 +45,11 @@
         <Facets
                 type="type"
                 store={typeFacet}
-                facetTitle='Type'
+                facetTitle='Тип'
                 request={`${baseURL}get_indications_classes/`}
         />
         <Facets
-                facetTitle='Product'
+                facetTitle='Название'
                 store={nameFacet}
                 type="product"
                 isSearch

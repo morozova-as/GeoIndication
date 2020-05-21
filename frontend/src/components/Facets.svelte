@@ -400,11 +400,11 @@
             {#if isLetters}
                 {#each letters as letter}
                     <div class="letter"
-                         class:hide={filteredFacetFields.filter(e => e[0] === letter).length === 0}
+                         class:hide={filteredFacetFields.filter(e => toCapitalize(e[0]) === letter).length === 0}
                     >{!/[A-ZА-Я]/.test(letter) ? '#' : letter}</div>
 
                     {#each facetFields as name, index (facetFields.indexOf(name))}
-                        {#if name[0] === letter}
+                        {#if toCapitalize(name[0]) === letter}
                             <div class="field"
                                  class:field__hide={!filteredFacetFields.includes(name)}>
                                 <!--                     class:field__up={checkedFields.includes(name)}-->

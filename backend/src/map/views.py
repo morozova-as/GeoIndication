@@ -163,7 +163,6 @@ def get_info(request):
                                    'href',
                                    'mainId',
                                    'manufacturer',
-                                   'name',
                                    'status'))
 
     dict_query = {}
@@ -179,8 +178,8 @@ def get_info(request):
             "href": q[1],
             "mainId": q[2],
             "manufacturer": q[3],
-            "name": q[4],
-            "status": q[5],
+            "name": geo_main.values_list('name')[0],
+            "status": q[4],
             "main_geo_text": geo_main.values_list('geo_loc_original')[0],
             "main_href": geo_main.values_list('href')[0],
             "main_description": geo_main.values_list('description')[0]
